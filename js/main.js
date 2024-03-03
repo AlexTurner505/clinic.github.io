@@ -4,34 +4,46 @@ const teamButton = document.getElementById('team-button');
 const talktousButton = document.getElementById('talktous-button');
 const contactsButton = document.getElementById('contacts-button');
 
-
-treatmentsButton.addEventListener('click', () => {
-    const treatmentsSection = document.getElementById('treatments');
-    treatmentsSection.scrollIntoView({
-        behavior: 'smooth'
+if(treatmentsButton){
+    treatmentsButton.addEventListener('click', () => {
+        const treatmentsSection = document.getElementById('treatments');
+        treatmentsSection.scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-});
 
-teamButton.addEventListener('click', () => {
-    const teamSection = document.getElementById('team');
-    teamSection.scrollIntoView({
-        behavior: 'smooth'
-    });
-});
+}
 
-contactsButton.addEventListener('click', () => {
-    const contactsSection = document.getElementById('footer');
-    contactsSection.scrollIntoView({
-        behavior: 'smooth'
+if(teamButton){
+    teamButton.addEventListener('click', () => {
+        const teamSection = document.getElementById('team');
+        teamSection.scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-});
 
-talktousButton.addEventListener('click', () => {
-    const talktousSection = document.getElementById('talktous');
-    talktousSection.scrollIntoView({
-        behavior: 'smooth'
+}
+
+if(contactsButton){
+    contactsButton.addEventListener('click', () => {
+        const contactsSection = document.getElementById('footer');
+        contactsSection.scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-});
+
+}
+
+if(talktousButton){
+    talktousButton.addEventListener('click', () => {
+        const talktousSection = document.getElementById('talktous');
+        talktousSection.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+
+}
+
 
 
 /*
@@ -50,22 +62,27 @@ window.addEventListener('scroll', function() {
 
 window.addEventListener("scroll", function() {
     var element = document.querySelector(".treatment-info-2");
-    var position = element.getBoundingClientRect().top;
-    var screenHeight = window.innerHeight;
+    
+    if(element)
+    {
+        var position = element.getBoundingClientRect().top;
+        var screenHeight = window.innerHeight;
 
-    if (position < screenHeight) {
-        element.classList.add("fade-in-from-left");
-    }
+        if (position < screenHeight) {
+            element.classList.add("fade-in-from-left");
+    }}
 });
 
 window.addEventListener("scroll", function() {
     var element = document.querySelector(".treatment-info-3");
-    var position = element.getBoundingClientRect().top;
-    var screenHeight = window.innerHeight;
+    if(element)
+    {
+        var position = element.getBoundingClientRect().top;
+        var screenHeight = window.innerHeight;
 
-    if (position < screenHeight) {
-        element.classList.add("fade-in-from-right");
-    }
+        if (position < screenHeight) {
+            element.classList.add("fade-in-from-right");
+    }}
 });
 
 function sendEmail(){
