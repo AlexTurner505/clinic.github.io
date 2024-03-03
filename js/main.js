@@ -6,32 +6,35 @@ const contactsButton = document.getElementById('contacts-button');
 
 
 treatmentsButton.addEventListener('click', () => {
-    const treatmentsSection = document.querySelector('.treatments');
+    const treatmentsSection = document.getElementById('treatments');
     treatmentsSection.scrollIntoView({
         behavior: 'smooth'
     });
 });
 
 teamButton.addEventListener('click', () => {
-    const teamSection = document.querySelector('.team');
+    const teamSection = document.getElementById('team');
     teamSection.scrollIntoView({
         behavior: 'smooth'
     });
 });
 
 contactsButton.addEventListener('click', () => {
-    const contactsSection = document.querySelector('.footer');
+    const contactsSection = document.getElementById('footer');
     contactsSection.scrollIntoView({
         behavior: 'smooth'
     });
 });
 
 talktousButton.addEventListener('click', () => {
-    const talktousSection = document.querySelector('.talktous');
+    const talktousSection = document.getElementById('talktous');
     talktousSection.scrollIntoView({
         behavior: 'smooth'
     });
 });
+
+
+/*
 
 window.addEventListener('scroll', function() {
     var teamBackground = document.querySelector('.team-background');
@@ -43,5 +46,40 @@ window.addEventListener('scroll', function() {
     }
 });
 
+*/
+
+window.addEventListener("scroll", function() {
+    var element = document.querySelector(".treatment-info-2");
+    var position = element.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+
+    if (position < screenHeight) {
+        element.classList.add("fade-in-from-left");
+    }
+});
+
+window.addEventListener("scroll", function() {
+    var element = document.querySelector(".treatment-info-3");
+    var position = element.getBoundingClientRect().top;
+    var screenHeight = window.innerHeight;
+
+    if (position < screenHeight) {
+        element.classList.add("fade-in-from-right");
+    }
+});
+
+function sendEmail(){
+    Email.send({
+        SecureToken : '719fd0b0-979e-4fb1-a9d3-48e8f17ecdd4',
+        To : 'pickkson@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : document.getElementById("subject").value,
+        Body : "Name: " + document.getElementById("name").value + 
+        "<br>Email: " + document.getElementById("email").value + 
+        "<br>Message: " + document.getElementById("message").value
+    }).then(
+      message => alert(message)
+    );
+}
 
 

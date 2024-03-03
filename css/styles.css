@@ -21,6 +21,7 @@ body{
 
 header {
     background: linear-gradient(89deg, rgb(21, 74, 189) 0.1%, rgb(26, 138, 211) 51.5%, rgb(72, 177, 234) 100.2%);
+    /*background: linear-gradient(to top, #afc1d5 0%, #4a82d2 100%);*/
     padding: 10px;
     border-bottom: 0px solid #ccc;
 }
@@ -121,11 +122,11 @@ main .grid-container {
 main .grid-container .grid-shadow::before{
     content: '';
     position: absolute;
-    top: -4%; /* Position the line above the grid container */
+    top: -3%; /* Position the line above the grid container */
     left: -3%; /* Adjust to control the starting point of the line */
-    width: 90%; /* Width of the line */
+    width: 85%; /* Width of the line */
     height: 80%; /* Height/thickness of the line */
-    background-color: black; /* Color of the line */
+    background-color: #292929; /* Color of the line */
     z-index: -1;
 }
 
@@ -170,9 +171,10 @@ main .treatment .treatment-name {
     position: absolute;
     top: 0px;
     right: 0px;
-    background-color: rgba(66,117,120,0.7);
+    background-color: rgba(81, 146, 149, 0.8);
     color: white;
     font-size: 1.5em;
+    font-weight: 530;
     padding: 15px 0px;
     width: 50%;
 }
@@ -202,13 +204,13 @@ main .treatment .plus {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-main .team .team-container{
+main #team .team-container{
     position: relative;
     margin-top: 200px;
 }
 
 
-.team .team-background {
+#team .team-background {
     position: absolute;
     top: 0;
     left: -10vw;
@@ -218,7 +220,7 @@ main .team .team-container{
     z-index: -1; 
     transform-origin: center;
     transform: rotate(18deg);
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     transition: opacity 1s ease;
@@ -226,7 +228,7 @@ main .team .team-container{
 
 
 
-.team .team-grid {
+#team .team-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4em;
@@ -234,14 +236,14 @@ main .team .team-container{
     margin: 150px auto;
 }
 
-.team .team-member {
+#team .team-member {
     text-align: center;
     overflow: hidden;
     position: relative;
     height: auto;
 }
 
-main .team .circle {
+main #team .circle {
     background-image: url(/images/couto.jpg);
     width: 220px;
     height: 220px;
@@ -252,27 +254,27 @@ main .team .circle {
     margin: 0 auto 30px ; 
 }
 
-main .team .team-member img {
+main #team .team-member img {
     max-width: 100%; /* Adjust image size */
 }
 
-main .team .team-member h3,
-main .team .team-member p {
+main #team .team-member h3,
+main #team .team-member p {
     font-size: 20px;
     margin: 5px 0;
 }
 
-main .team .team-member p {
+main #team .team-member p {
     color: rgb(107, 103, 103);
     font-weight: 300;
 }
 
-main .talktous{
+main #talktous{
     margin-top: 250px;
 }
 
 
-main .talktous .mail{
+main #talktous .mail{
     width: 40%;
     height: auto;
     flex-shrink: 0;
@@ -280,7 +282,7 @@ main .talktous .mail{
     position: relative;
 }
 
-.talktous .paper {
+#talktous .paper {
   position: absolute;
   width: 70%;
   height: 85%;
@@ -296,27 +298,27 @@ main .talktous .mail{
 }
 
 
-.talktous .form-container {
+#talktous .form-container {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.talktous form {
+#talktous form {
     flex: 1; 
     display: flex;
     flex-direction: column;
 }
 
-.talktous .input-container {
+#talktous .input-container {
   display: flex;
   margin-bottom: 30px;
   height: 15px;
 }
 
 
-.talktous .input-container input,
-.talktous .input-container textarea {
+#talktous .input-container input,
+#talktous .input-container textarea {
   flex: 1;
   padding: 10px;
   height: 100%;
@@ -330,15 +332,15 @@ main .talktous .mail{
   box-sizing: content-box;
 }
 
-.talktous .input-container input:focus,
-.talktous .input-container textarea:focus{
+#talktous .input-container input:focus,
+#talktous .input-container textarea:focus{
     background-color: rgba(94,163,172,0.2);
 
 }
 
 
-.talktous input::placeholder,
-.talktous textarea::placeholder {
+#talktous input::placeholder,
+#talktous textarea::placeholder {
     font-family: 'Roboto', sans-serif;
   font-size: 16px; 
   font-weight: 600; 
@@ -350,16 +352,16 @@ main .talktous .mail{
 
 
 
-.talktous .input-container.full-width {
+#talktous .input-container.full-width {
   flex: 1; /* Take remaining space */
 }
 
-.talktous .submit-container {
+#talktous .submit-container {
   text-align: center;
   margin-top: 20px;
 }
 
-.talktous button {
+#talktous button {
   padding: 10px 25px;
   background-color: #427578;
   color: white;
@@ -369,7 +371,7 @@ main .talktous .mail{
   border-radius: 5px;
 }
 
-.talktous button:hover {
+#talktous button:hover {
   background-color: #0056b3;
 }
 
@@ -470,6 +472,262 @@ transition-delay: 0.5s;
 
 */
 
+.treatment-image {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 180px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+.treatment-image h1 {
+    display: flex;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    left: 3%;
+    color: white   ;
+    z-index: 1;
+    position: absolute;
+}
+
+.treatment-image-div {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #595656;
+    opacity: 0.9;
+    filter: blur(4px);
+    transform: scale(1.1);
+}
+
+
+.treatment-image-div img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0.6;
+    object-fit: cover;
+    margin: auto; 
+    position: relative; 
+    top: 50%; 
+    transform: translateY(-35%);
+    filter: blur(2px);
+    overflow: hidden;
+}
+
+
+.treatment-info-1{
+    display: flex;
+    position: relative;
+    background-color: #D9D9D9;
+    width: 80%;
+    height: 300px;
+    float: right;
+    border-radius: 25px;
+    margin-bottom: 200px;
+    margin-top: 100px;
+    animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); /* Start position: translate the element to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End position: translate the element back to its original position */
+    }
+}
+
+.fade-in-from-right {
+    animation: fadeInRight 1s forwards;
+}
+
+.treatment-info-1-text h2 {
+    padding: 60px 60px 40px 80px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    font-weight: 700;
+    width: 50%;
+    font-size: 22px;
+}
+
+.treatment-info-1-text p {
+    padding: 0px 0px 0px 80px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(49, 49, 49);
+    width: 35%;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.treatment-info-1-image{
+    position: absolute;
+    width: 60%;
+    height: 140%;
+    right: 0;
+    top: -20%;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+}
+
+.treatment-info-1-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255, 0.4)); /* Adjust opacity values as needed */
+    z-index: 1; /* Ensure the gradient overlay is above the image */
+    pointer-events: none; /* Allows clicks to go through the overlay to the image */
+  }
+
+.treatment-info-1-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    margin: auto; 
+    overflow: hidden;
+}
+
+.treatment-info-2{
+    display: flex;
+    width: 100%;
+    height: 320px;
+    background-color: #5EA3AC;
+    margin-bottom: 100px;
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-from-left {
+    animation: fadeInFromLeft 1s forwards;
+}
+
+.treatment-info-2-text h2 {
+    padding: 70px 60px 60px 100px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    font-weight: 700;
+    width: 100%;
+    font-size: 22px;
+}
+
+.treatment-info-2-text p {
+    padding: 0px 0px 0px 100px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    width: 80%;
+    line-height: 1.6;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.treatment-info-3{
+    display: flex;
+    position: relative;
+    background-color: #D9D9D9;
+    width: 60%;
+    height: auto;
+    float: right;
+    margin-bottom: 400px;
+    padding-bottom: 40px;
+    margin-right: 5%;
+    margin-top: 100px;
+}
+
+
+.treatment-info-3-text {
+    display: flex;
+    flex-direction: column; 
+    margin-left: 25%;
+}
+
+
+
+.treatment-info-3-text h2 {
+    display: flex;
+    padding: 45px 0px 20px 0px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+
+.treatment-info-3-text ul {
+    position: relative;
+    padding: 20px 0px 0px 20px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+    color: rgb(49, 49, 49);
+    width: 90%;
+}
+
+.treatment-info-3-text ul li {
+    padding-bottom: 16px;
+}
+
+
+.treatment-info-3-image{
+    position: absolute;
+    width: 50%;
+    height: 120%;
+    left: -30%;
+    top: 40%;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+}
+
+.treatment-info-3-image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    margin: auto; 
+    overflow: hidden;
+}
+
+
+
 
 
 footer {
@@ -482,7 +740,7 @@ footer {
     text-align: center;
 }
 
-.footer{
+#footer{
     width: 80%;
     display: flex;
     justify-content: space-around;

@@ -32,7 +32,7 @@
         <div class="background-container">
             <img class="background" src="images/background.jpg" alt="Background">
         </div>
-        <section class="treatments">
+        <section id="treatments">
             <h1>TRATAMENTOS</h1>
             <div class="grid-container">
                 <div class="grid-shadow"></div>
@@ -43,7 +43,7 @@
                             <div class="treatment-name">Cirurgia Oral</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="cirurgiaOralInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -54,7 +54,7 @@
                             <div class="treatment-name">Dentisteria</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="dentisteriaInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -65,7 +65,7 @@
                             <div class="treatment-name">Endodontia</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="endodontiaInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -76,7 +76,7 @@
                             <div class="treatment-name">Implantologia</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="implantologiaInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="treatment-name">Medicina Dentária Generalista</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="medicinaGeneralistaInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -98,7 +98,7 @@
                             <div class="treatment-name">Odontopediatria</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="odontopediatriaInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -109,7 +109,7 @@
                             <div class="treatment-name">Ortodontia</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="ortodontiaInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -120,7 +120,7 @@
                             <div class="treatment-name">Protese</div>
                         </div>
                         <div class="treatment-overlay">
-                            <a class="overlay-button" href="more_info_page.html">
+                            <a class="overlay-button" href="proteseInfo.html">
                                 <div class="plus">+</div>
                               </a>
                         </div>
@@ -129,7 +129,7 @@
             </div>
         </section>
 
-        <section class="team">
+        <section id="team">
             <h1>CONHEÇA A EQUIPA</h1>
             <div class="team-container">
                 <div class="team-background"></div>
@@ -158,13 +158,13 @@
             </div>
         </section>
 
-        <section class="talktous">
+        <section id="talktous">
             <h1>FALE CONNOSCO</h1>
             <div class="mail">
 
                 <div class="paper">
                     <div class="form-container">
-                      <form>
+                      <form onsubmit="sendEmail(); reset(); return false;">
                       <div class="input-container">
                         <input type="text" id="name" name="name" placeholder="Nome">
                       </div>
@@ -209,7 +209,7 @@
     </main>
 
     <footer>
-        <div class="footer">
+        <div id="footer">
             <div class="footer-section">
               <h3>Horário</h3>
               <ul class="schedule">
@@ -241,6 +241,7 @@
       
 
     <script src="js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 
 </html>
